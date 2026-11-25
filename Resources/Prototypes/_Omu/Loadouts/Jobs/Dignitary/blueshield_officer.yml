@@ -19,6 +19,17 @@
   equipment:
     jumpsuit: ClothingUniformBlackBlueShieldOfficerTurtleneckSkirt
 
+# Eyes
+- type: loadout
+  id: BSOGlasses
+  equipment:
+    eyes: ClothingEyesGlassesBSO
+
+- type: loadout
+  id: BSOVisor
+  equipment:
+    eyes: ClothingEyesVisorBlueshield
+
 # OuterClothing
 - type: loadout
   id: BSOArmoredCoat
@@ -79,7 +90,7 @@
 - type: loadout #BSO's belt - Moved to Loadout
   id: BeltAssaultFilled
   equipment:
-    belt: ClothingBeltAssaultFilled
+    belt: ClothingBeltMilitaryWebbingFilled
 
 - type: loadout
   id: BsoSwordBelt

@@ -35,6 +35,11 @@
     head: ClothingHeadHatKepiCorpsmanVeteran
 
 - type: loadout
+  id: VisorMedSec
+  equipment:
+    eyes: ClothingEyesVisorMedSec
+
+- type: loadout
   id: CorpsmanJumpsuit
   equipment:
     jumpsuit: ClothingUniformJumpsuitCorpsman
@@ -123,4 +128,31 @@
   equipment:
     eyes: ClothingEyesGlassesMedSec
 
+- type: loadout
+  id: BrigmedWeaponCrossbowSyringe
+  equipment:
+    suitstorage: WeaponCrossbowSyringe
+  groupBy: "Main weapon"
 
+- type: loadout
+  id: BrigmedWeaponDisablerSMG
+  equipment:
+    back: WeaponDisablerSMG
+  groupBy: "Main weapon"
+
+- type: loadout
+  id: WeaponPneumaticShotgun
+  equipment:
+    suitstorage: WeaponPneumaticShotgun
+  groupBy: "Main weapon"
+
+- type: loadout
+  id: BrigMedCase
+  equipment:
+    pocket1: BrigMedCase
+  groupBy: "Main weapon"
+
+- type: loadout
+  id: BrigmedicUshanka
+  equipment:
+    head: ClothingHeadHatUshankaBrigmed

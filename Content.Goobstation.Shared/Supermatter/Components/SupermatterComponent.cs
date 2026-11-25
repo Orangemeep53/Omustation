@@ -1,19 +1,3 @@
-// SPDX-FileCopyrightText: 2024 Aidenkrz <aiden@djkraz.com>
-// SPDX-FileCopyrightText: 2024 Piras314 <p1r4s@proton.me>
-// SPDX-FileCopyrightText: 2024 VMSolidus <evilexecutive@gmail.com>
-// SPDX-FileCopyrightText: 2024 username <113782077+whateverusername0@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2024 whateverusername0 <whateveremail>
-// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Aviu00 <93730715+Aviu00@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 Discoded <33738298+Discoded@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 GoobBot <uristmchands@proton.me>
-// SPDX-FileCopyrightText: 2025 Misandry <mary@thughunt.ing>
-// SPDX-FileCopyrightText: 2025 Steve <marlumpy@gmail.com>
-// SPDX-FileCopyrightText: 2025 gus <august.eymann@gmail.com>
-// SPDX-FileCopyrightText: 2025 marc-pelletier <113944176+marc-pelletier@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 yahay505 <58685802+yahay505@users.noreply.github.com>
-// SPDX-FileCopyrightText: 2025 yavuz <58685802+yahay505@users.noreply.github.com>
-//
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System;
@@ -405,13 +389,14 @@ public sealed partial class SupermatterComponent : Component
         {Gas.Nitrium, 0f }, // EE Compatibility
         {Gas.BZ, 0f}, // Assmos - /tg/ gases
         {Gas.Healium, 0f}, // Assmos - /tg/ gases
-        {Gas.Pluoxium, 0f} // Assmos - /tg/ gases
+        {Gas.Pluoxium, 0f}, // Assmos - /tg/ gases
+
     };
 
     /// <summary>
     ///     Stores each gas facts
     /// </summary>
-    public readonly Dictionary<Gas, (float TransmitModifier, float HeatPenalty, float PowerMixRatio, float AngerValue)> GasDataFields = new()   //Omu - AngerValue refers to the arbritary value added to cause the SM to trigger events.
+    public Dictionary<Gas, (float TransmitModifier, float HeatPenalty, float PowerMixRatio, float AngerValue)> GasDataFields = new()   //Omu - AngerValue refers to the arbritary value added to cause the SM to trigger events. Omu set to writable, for GAMBLING
     {
         [Gas.Oxygen] = (TransmitModifier: 1.5f, HeatPenalty: 1f, PowerMixRatio: 1f, AngerValue: 1f),
         [Gas.Nitrogen] = (TransmitModifier: 0f, HeatPenalty: -1.5f, PowerMixRatio: -1f, AngerValue: -1f),
@@ -474,7 +459,7 @@ public sealed partial class SupermatterComponent : Component
     public double Timetounlock = 5;
 
     public double Timelocked;
-    public bool Varlocked = false;
+    public bool Varlocked = false; // OMU: Varlocked is called Surge in Goob. They are the same variable. See Goob#7076 Goob#7135 and Omu#1107.
 
     /// <summary>
     /// The desired setpoint for a radiation output factor - bigger number means it will try reach a bigger value
@@ -497,6 +482,24 @@ public sealed partial class SupermatterComponent : Component
     [DataField("GasEfficiencyFactorChanged")]
     [ViewVariables(VVAccess.ReadWrite)]
     public bool GasEfficiencyFactorChanged = false;
+
+    // Omu
+    [DataField("LightningCountNormal")]
+    public int LightningCountNormal = 1;
+    
+    // Omu
+    [DataField("LightningCountOverclocked")]
+    public int LightningCountOverclocked = 3;
+    
+    // Omu
+    [DataField]
+    [ViewVariables(VVAccess.ReadOnly)]
+    public bool HazardGas = false;
+
+    // Omu
+    [DataField]
+    [ViewVariables(VVAccess.ReadOnly)]
+    public float TimeSinceHazardGas = 0f;
 
 }
 [Prototype]

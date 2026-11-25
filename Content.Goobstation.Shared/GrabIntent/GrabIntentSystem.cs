@@ -100,7 +100,7 @@ public sealed partial class GrabIntentSystem : EntitySystem
             if (TryComp<VirtualItemComponent>(item, out var vi))
                 _virtualSystem.DeleteVirtualItem((item, vi), uid);
             else
-                QueueDel(item);
+                PredictedQueueDel(item); // Trauma - grab throwing is predicted now
         }
 
         Dirty(uid, component);
@@ -128,7 +128,7 @@ public sealed partial class GrabIntentSystem : EntitySystem
         if (!TryComp<PullableComponent>(uid, out var pullable) || !pullable.BeingPulled)
             return;
 
-        if (component.GrabStage == GrabStage.Soft)
+        if (component.GrabStage == GrabStage.Soft && _blocker.CanInteract(uid, null))
             _pulling.TryStopPull(uid, pullable, uid);
 
         if (!_blocker.CanMove(args.Entity))

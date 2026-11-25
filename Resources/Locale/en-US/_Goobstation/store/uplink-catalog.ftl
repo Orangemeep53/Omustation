@@ -284,6 +284,9 @@ uplink-autosurgeon-mantis-blade-desc = Modifies the user's arm to include the Ma
 uplink-autosurgeon-sandevistan-name = Sandevistan Autosurgeon
 uplink-autosurgeon-sandevistan-desc = Replaces the user's heart with Sandevistan, a synthetic organ that drastically increases the user's speed at the cost of their endurance. Requires too much fine tuning for a human to provide, comes with a one-use autosurgeon for installation.
 
+uplink-autosurgeon-statveka-sandevistan-name = Statveka Sandevistan Autosurgeon
+uplink-autosurgeon-statveka-sandevistan-desc = Replaces the user's heart with a statveka Sandevistan, a synthetic organ that drastically increases the user's speed and reflex at the cost of their endurance. Unlike their normal counterpart, this one seemingly slows down time near the user. comes with a one-use autosurgeon for installation.
+
 uplink-davids-jacket-name = Edgerunner Jacket
 uplink-davids-jacket-desc = A jacket for those particularly interested in improving their bodies, just like you.
 
@@ -335,7 +338,7 @@ uplink-capoeira-name = Capoeira Manual
 uplink-capoeira-desc = A manual that teaches a single user Capoeira before self-destructing. Capoeira focuses on swift attacks that link into flowing combos, with each move faster and harder than the last one, fueled by relentless momentum.
 
 uplink-sleeping-carp-name = Way of the Sleeping Carp Scroll
-uplink-sleeping-carp-desc = This single-use scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat, deflecting ranged weapon fire, and space carp will become friendly to you. Learning this art means you will also refuse to use dishonorable ranged weaponry. Unable to be understood by changelings.
+uplink-sleeping-carp-desc = This single-use scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat, effortlessly dodging ranged weapon fire, and space carp will become friendly to you. Learning this art means you will also refuse to use dishonorable ranged weaponry. Unable to be understood by changelings.
 
 
 # Misc

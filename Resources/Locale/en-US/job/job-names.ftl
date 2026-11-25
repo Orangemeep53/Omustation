@@ -80,9 +80,9 @@ job-name-ertengineer = ERT Engineer
 job-name-ertsecurity = ERT Security
 job-name-ertmedic = ERT Medic
 job-name-ertjanitor = ERT Janitor
-job-name-boxer = Boxer
-job-name-zookeeper = Zookeeper
 job-name-visitor = Visitor
+## omu edit - tram driver
+job-name-tram-driver = Tram Driver
 # Viro
 job-name-virologist = Virologist
 job-name-cluwne = Cluwne
@@ -113,7 +113,6 @@ JobAtmosphericTechnician = Atmospheric Technician
 JobBartender = Bartender
 JobBorg = Borg
 JobBotanist = Botanist
-JobBoxer = Boxer
 JobCaptain = Captain
 JobCargoTechnician = Cargo Technician
 JobCentralCommandOfficial = Central Command Official
@@ -160,4 +159,3 @@ JobStationEngineer = Station Engineer
 JobTechnicalAssistant = Technical Assistant
 JobVisitor = Visitor
 JobWarden = Warden
-JobZookeeper = Zookeeper

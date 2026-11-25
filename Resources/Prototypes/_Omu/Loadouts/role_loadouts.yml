@@ -19,18 +19,19 @@
   id: JobSecuritySergeant
   groups:
   - SergeantHead
+  - SecurityEyewear
   - SergeantJumpsuit
   - SecurityBackpack
   - SecurityMelee # Goobstation
   - TrinketsSecuritySergeant # Actually is their guns, not trinkets.
   - SecurityOuterClothing
   - SecurityShoes
+  - SecurityGloves
   - SergeantNeck
   - SecuritySergeantPDA
   - SergeantBelt
   - SurvivalSecurity
   - Trinkets
-  - SecurityStar
   - Animals
   - GroupSpeciesBreathToolSecurity
   # Goobstation - EE Plasmeme Change.
@@ -41,6 +42,7 @@
 - type: roleLoadout
   id: JobCourier
   groups:
+  - GroupTankHarness
   - CourierHead
   - CourierJumpsuit
   - CourierOuterClothing

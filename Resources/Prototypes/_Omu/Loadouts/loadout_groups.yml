@@ -110,6 +110,7 @@
   loadouts:
   - CargoTechnicianJumpsuitMail
   - CargoTechnicianJumpskirtMail
+  - MailCarrierMJ # Omu
   - CourierJumpsuit
   - CourierJumpskirt
   - CourierJumpsuitLong
@@ -128,7 +129,7 @@
   - CargoTechnicianBackpack
   - CargoTechnicianSatchel
   - CargoTechnicianDuffel
-  - MailCarrierMessenger
+  # - MailCarrierMessenger
   - CourierMessenger
   - CargoTechnicianMessenger
 
@@ -183,8 +184,23 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
+  # - MailCarrierEnvirogloves
   - WhiteEnvirogloves
-  - CourierEnvirogloves
+
+- type: loadoutGroup
+  id: VirologistHead
+  name: loadout-group-virologist-head
+  minLimit: 0
+  loadouts:
+  - MedicalBeret
+  - SeniorPhysicianBeret
+  - MedicalHeadMirror
+  - BlueSurgeryCap
+  - GreenSurgeryCap
+  - PurpleSurgeryCap
+  - NurseHat
+  - UshankaVirologist
+
 - type: loadoutGroup
   id: VirologistEnvirohelm
   name: loadout-group-virologist-envirohelm
@@ -225,7 +241,8 @@
   loadouts:
   - NanotrasenRepresentativeWintercoat
   - NanotrasenRepresentativeLongcoat
-
+  - CentcommWinterCoat
+  - ExpensiveCoat
 #New Selectable PDAs
 
 - type: loadoutGroup
@@ -266,6 +283,15 @@
 
 # Blueshield Officer
 
+- type: loadoutGroup
+  id: BlueshieldEyewear
+  name: loadout-group-bso-eyewear
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - BSOGlasses
+  - BSOVisor
+
 # - type: loadoutGroup
 #   id: BlueshieldOfficerBelt # - Now moved to support kits
 #   name: loadout-group-bso-belt
@@ -286,6 +312,7 @@
   loadouts:
   - GlassesMedSec
   - GlassesCorpsman
+  - VisorMedSec
 
 - type: loadoutGroup
   id: CorpsmanBelt
@@ -331,8 +358,17 @@
   - WeaponPistolMk58Gold
 
 - type: loadoutGroup
+  id: SecurityEyewear
+  name: loadout-group-security-eyewear
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SecurityGlasses
+  - SecurityVisor
+
+- type: loadoutGroup
   id: TrinketsSecuritySergeant
-  name: loadout-group-trinkets-job
+  name: loadout-group-sergeant-gun
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -342,6 +378,7 @@
   - SecurityOfficerEG1
   - WeaponPistolMk58Gold
   - SecuritySergeantMosin
+  - SecuritySergeantEnergyMagnum
 
 - type: loadoutGroup
   id: SecuritySergeantPDA
@@ -364,7 +401,7 @@
   id: SergeantBelt
   name: loadout-group-sergeant-belt
   loadouts:
-  - SergeantBelt
+  # - SergeantBelt # its our change but i prefer commenting things out (Omu)
   - SecurityBelt
   - SecurityWebbing
   - SecuritySwordBelt # Omu
@@ -398,6 +435,7 @@
   maxLimit: 1
   loadouts:
   - DetectiveWeaponRevolverInspector # Default for det should be their revolver
+  - DetectiveWeaponRevolverR3Compleat
 
 - type: loadoutGroup
   id: DetectiveEyes
@@ -406,6 +444,7 @@
   maxLimit: 1
   loadouts:
   - DetectiveClothingEyesGlassesSecurity
+  - SecurityVisor
   - DetectiveClothingEyesGlassesNoir
 
 # And... a separate one for brigmed cause they cant put the terminus in the suit storage
@@ -415,11 +454,14 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - SecurityOfficerGunCase
+  - BrigMedCase # Brigmed gets some goddamn flavor now
   - SecurityOfficerMk58
   - SecurityOfficerSecurityDutyRevolver
   - SecurityOfficerEG1
   - WeaponPistolMk58Gold
+  - BrigmedWeaponCrossbowSyringe
+  - WeaponPneumaticShotgun
+  - BrigmedWeaponDisablerSMG
 
 # clown
 - type: loadoutGroup
@@ -477,3 +519,97 @@
   - WhiteShoes
   - LeatherShoes
   - WinterBoots
+
+# Medical Doctor
+- type: loadoutGroup
+  id: MedicalDoctorBackpack
+  name: loadout-group-medical-doctor-backpack
+  loadouts:
+  - MedicalDoctorBackpack
+  - CybersunMedicalBackpack
+  - MedicalDoctorSatchel
+  - CybersunMedicalSatchel
+  - MedicalDoctorDuffel
+  - CybersunMedicalDuffel
+  - MedicalDoctorMessenger # Frontier
+  - CybersunMedicalMessenger
+
+- type: loadoutGroup
+  id: MedicalNeck
+  name: loadout-group-medical-neck
+  minLimit: 0
+  loadouts:
+  - MedicalStethoscope
+
+# Paramedic
+- type: loadoutGroup
+  id: ParamedicBackpack
+  name: loadout-group-paramedic-backpack
+  loadouts:
+  - ParamedBackpack
+  - MedicalDoctorBackpack
+  - CybersunMedicalBackpack
+  - ParamedSatchel
+  - MedicalDoctorSatchel
+  - CybersunMedicalSatchel
+  - ParamedDuffel
+  - MedicalDoctorDuffel
+  - CybersunMedicalDuffel
+  - ParamedMessenger
+  - MedicalDoctorMessenger # Frontier
+  - CybersunMedicalMessenger
+
+- type: loadoutGroup
+  id: ParamedicBelt
+  name: loadout-group-paramedic-belt
+  loadouts:
+  - EMTBelt
+  - ParamedPouch
+
+# Chef
+- type: loadoutGroup
+  id: ChefBackpack
+  name: loadout-group-chef-backpack
+  loadouts:
+  - ChefBackpack
+  - ChefBackpackSatchel
+  - ChefBackpackDuffel
+  - ChefBackpackMessenger
+
+# Janitor
+- type: loadoutGroup
+  id: JanitorBackpack
+  name: loadout-group-janitor-backpack
+  loadouts:
+  - JanitorBackpack
+  - JanitorBackpackSatchel
+  - JanitorBackpackDuffel
+  - JanitorBackpackMessenger
+
+# Bartender
+- type: loadoutGroup
+  id: BartenderBackpack
+  name: loadout-group-bartender-backpack
+  loadouts:
+  - BartenderBackpack
+  - BartenderBackpackSatchel
+  - BartenderBackpackDuffel
+  - BartenderBackpackMessenger
+
+# Blueshield Officer
+- type: loadoutGroup
+  id: SurvivalBlueshieldOfficer
+  name: loadout-group-survival-blueshield
+  minLimit: 3
+  hidden: true
+  loadouts:
+  - EmergencyNitrogenBlueshieldOfficer
+  - EmergencyOxygenBlueshieldOfficer
+  - EmergencyPlasmaBlueshieldOfficer
+  - LoadoutSpeciesVoxNitrogen
+  - LoadoutSpeciesPlasma 
+  - EmergencyWaterVaporBlueshieldOfficer 
+  - EmergencySilicon 
+  - EmergencyOxygenCarnivoreBlueshieldOfficer 
+  - EmergencyOxygenEthanolBlueshieldOfficer 
+  - EmergencyOxygenVegetarianBlueshieldOfficer
